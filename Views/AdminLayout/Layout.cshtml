@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Action("AdminLayoutHead", "AdminLayout")
+
+<body>
+    <div class="container-fluid position-relative d-flex p-0">
+
+        @Html.Action("AdminLayoutSpinner", "AdminLayout")
+
+        @Html.Action("AdminLayoutSidebar", "AdminLayout")
+
+
+        <div class="content">
+
+            @Html.Action("AdminLayoutNavbar", "AdminLayout")
+
+            <div class="container-fluid pt-4 px-4">
+                <div class="col-12 bg-secondary">
+                    @RenderBody()
+                </div>
+            </div>
+
+            @Html.Action("AdminLayoutFooter", "AdminLayout")
+
+        </div>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    @Html.Action("AdminLayoutScripts", "AdminLayout")
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+
+    <!-- Sayfaya özel script'ler render edilecek -->
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+

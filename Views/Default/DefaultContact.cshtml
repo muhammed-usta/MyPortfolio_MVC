@@ -1,0 +1,33 @@
+﻿@model List<MyPortfolio_MVC.Models.TblContact>
+
+<section id="contact" class="s-contact target-section">
+    <div class="row contact-top">
+        <div class="column lg-12">
+            <h2 class="text-pretitle">ILETIŞIME GEÇ</h2>
+            <p class="h1">Bana ulaşmak isterseniz aşağıdaki bana ulaşın butonundan iletişime geçebilirsiniz.</p>
+        </div>
+    </div>
+
+    <div class="row contact-bottom">
+        @foreach (var contact in Model)
+        {
+            <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
+                <h3 class="text-pretitle">Bana Ulaş</h3>
+                <p class="contact-links">
+                    <a href="mailto:@contact.Email" class="mailtoui">@contact.Email</a><br>
+                    <a href="tel:@contact.Phone">@contact.Phone</a>
+                </p>
+            </div>
+        }
+        @Html.Action("DefaultFooterSocialMedia")
+        <br />
+        <div class="column lg-4 md-12 contact-block">
+            <a href="#contact2" class="btn btn-primary">
+                Bana Ulaşın
+            </a>
+
+        </div>
+
+    </div>
+  
+</section>

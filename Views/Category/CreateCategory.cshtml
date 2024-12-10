@@ -1,0 +1,24 @@
+﻿@model MyPortfolio_MVC.Models.TblCategory
+@{
+    ViewBag.Title = "CreateCategory";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<h2>Yeni Kategori Ekleme Sayfası</h2>
+
+
+<form method="post">
+   
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Name)
+    <br />
+
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+    <br />
+
+</form>
+
+
+

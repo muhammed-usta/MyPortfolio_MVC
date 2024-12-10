@@ -1,0 +1,22 @@
+﻿@model MyPortfolio_MVC.Models.TblBanner
+@{
+    ViewBag.Title = "UpdateBanner";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<h2>Banner Güncelle</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.BannerId)
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-outline-primary">Güncelle</button>
+    <br />
+
+</form>
+

@@ -1,0 +1,19 @@
+﻿
+@model List<MyPortfolio_MVC.Models.TblMessage>
+
+@foreach (var message in Model)
+{
+    <a href="@Url.Action("MessageDetail", "Message", new { id = message.MessageId })" class="dropdown-item">
+        <div class="d-flex align-items-center">
+            <img class="rounded-circle" src="~/Templates/darkpan-1.0.0/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+            <div class="ms-2">
+                <h6 class="fw-normal mb-0">@message.Name sana bir mesaj gönderdi.</h6>
+                <small>@message.MessageContent</small>
+            </div>
+        </div>
+    </a>
+    <hr class="dropdown-divider">
+}
+}
+
+<a href="@Url.Action("ShowAllMessages", "Message")" class="dropdown-item text-center">Tüm Mesajları Göster</a>

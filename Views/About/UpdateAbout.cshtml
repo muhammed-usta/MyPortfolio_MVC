@@ -1,0 +1,39 @@
+﻿@model MyPortfolio_MVC.Models.TblAbout
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<h2>UpdateAbout</h2>
+
+<form method="post" enctype="multipart/form-data">
+    @Html.HiddenFor(x => x.AboutId)
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+
+
+    <div>
+        <label for="ImageFile">Fotoğraf Yükleyin</label>
+        <input type="file" name="ImageFile" id="ImageFile" />
+    </div>
+
+    <br />
+
+    <div>
+        <label for="PdfFile">Cv İçin Pdf Dosyası Yükleyin</label>
+        <input type="file" name="PdfFile" id="PdfFile" />
+    </div>
+
+
+
+    <br />
+    <button class="btn btn-outline-primary">Güncelle</button>
+    <br />
+
+</form>
+
+

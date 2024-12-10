@@ -1,0 +1,39 @@
+﻿@model MyPortfolio_MVC.Models.TblAbout
+@{
+    ViewBag.Title = "CreateAbout";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<h2>Hakkımda Alanı Ekle</h2>
+
+
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Başlık</label>
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    
+        <br />
+
+        <label>Açıklama</label>
+        @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+      
+        <br />
+
+        
+        <div>
+            <label for="ImageFile">Fotoğraf Yükleyin</label>
+            <input type="file" name="ImageFile" id="ImageFile" />
+        </div>
+        <br />
+
+      
+        <div>
+            <label for="PdfFile">Cv İçin Pdf Dosyası Yükleyin</label>
+            <input type="file" name="PdfFile" id="PdfFile" />
+        </div>
+    </div>
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+    <br />
+</form>

@@ -1,0 +1,42 @@
+﻿
+@model Tuple<List<MyPortfolio_MVC.Models.TblContact>, List<MyPortfolio_MVC.Models.TblSocialMedia>>
+
+
+@Html.Action("DefaultSocialMedia")
+
+<section id="contact2" class="s-contact target-section">
+
+    <div class="row contact-top">
+        <div class="column lg-12 md-6 tab-6 stack-on-550 contact-block">
+            <h2 class="text-pretitle">
+                Mesaj Gönderin
+            </h2>
+            <form class="column lg-12" method="post" action="/Default/SendMessage/">
+                <label>Ad Soyad</label>
+                <input type="text" name="Name" class="form-control" required />
+                <br />
+                <label>Email</label>
+                <input type="email" name="Email" class="form-control" required />
+                <br />
+                <label>Konu</label>
+                <input type="text" name="Subject" class="form-control" required />
+                <br />
+                <label>Mesajınız</label>
+                <textarea type="text" name="MessageContent" class="form-control" rows="4" required></textarea>
+                <br />
+                <button class="btn btn-outline-dark">Mesajı Gönder</button>
+
+
+            </form>
+        </div>
+    </div> <!-- end contact-top -->
+
+
+
+
+
+
+
+
+</section>
+
